@@ -81,14 +81,15 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="derece" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vsv-nf-Xct">
-                                <rect key="frame" x="0.0" y="209" width="414" height="49"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="sehir isim.." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ora-Ok-p4g">
+                                <rect key="frame" x="0.0" y="117" width="414" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="40"/>
                                 <color key="textColor" name="AccentColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="sehir isim.." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ora-Ok-p4g">
-                                <rect key="frame" x="0.0" y="117" width="414" height="49"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" °C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vsv-nf-Xct">
+                                <rect key="frame" x="0.0" y="235" width="414" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="40"/>
                                 <color key="textColor" name="AccentColor"/>
@@ -97,14 +98,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eOS-gC-bUn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="eOS-gC-bUn" firstAttribute="trailing" secondItem="Vsv-nf-Xct" secondAttribute="trailing" id="8tK-gu-vVx"/>
-                            <constraint firstItem="eOS-gC-bUn" firstAttribute="bottom" secondItem="Vsv-nf-Xct" secondAttribute="bottom" constant="21" id="Nzu-kg-uVW"/>
-                            <constraint firstItem="Vsv-nf-Xct" firstAttribute="leading" secondItem="eOS-gC-bUn" secondAttribute="leading" id="X43-Sd-0H8"/>
-                            <constraint firstItem="Vsv-nf-Xct" firstAttribute="top" secondItem="eOS-gC-bUn" secondAttribute="top" constant="23" id="mrh-YZ-bNe"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Weather" id="bKG-iC-raa"/>
+                    <connections>
+                        <outlet property="cityName" destination="Ora-Ok-p4g" id="6xW-QQ-0he"/>
+                        <outlet property="weather" destination="Vsv-nf-Xct" id="6Do-eB-RRD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="95F-Hp-tCC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -1,9 +1,3 @@
-//
-//  ViewController.swift
-//  weatherapp
-//
-//  Created by elif nur dıvarcı on 24.07.2022.
-//
 
 import UIKit
 
@@ -23,6 +17,7 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = true
+        cityTextField.text = ""
     }
     
     
@@ -38,6 +33,10 @@ class ViewController: UIViewController {
             self.present(alert, animated: true, completion: nil)
         } else {
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+            
+            vc.city = city
+            
+            self.show(vc, sender: nil)
         }
     }
     
